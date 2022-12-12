@@ -1,25 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Practicas de Git</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <h1>Practicas Git</h1>
     <p>Para que git vea una carpeta en particular usamos git init</p>
     <p>git monitorea linea por linea</p>
     <p>git status para revisar si el repositorio tiene cambios</p>
-    <ul>
-      <li>Vagrant</li>
+    <p>configuracion inicial</p>
+    <p>git config --local user.name "Tu nombre aquí"</p>
 
-      <li>Docker</li>
+    <p>git config --local user.email "Tu@email.aqui”</p>
+    <p>si quieres que todos los archivos sean manejados por el mismo creador cambia local por global</p>
+    <p>para verificar que los archivos fueron agregados correctamente se comprueva con </p>
+    <p>git config user.name</p>
+    <p>git config user.email</p>
 
-      <li>Ansible</li>
+    <p>
+        HEAD: Estado actual de nuestro código, es decir, donde nos colocó Git
+        Working tree: Lugar donde los archivos realmente están siendo
+        almacenados index: Lugar donde Git almacena lo que será commiteado, es
+        decir, la ubicación entre el working tree y el repositorio de Git en sí.
+    </p>
+    <p>el comando: git log nos regresa el historico de las modificasiones:</p>
+    <p>commit c5caeb43sdfdsfgfdghdghjgwe345f9ab6 (HEAD -> master)
+        Author: gladys5 <correo@correo.com>
+            Date: Mon Dec 12 03:56:03 2022 -0700 primer comit
+    </p>
+    <p>el hash identificador unico del commit con este podras regresar a un punto si te equivocaste
 
-      <li>Integración continua</li>
-    </ul>
-  </body>
+    </p>
+    <p>commit c5caeb43sdfdsfgfdghdghjgwe345f9ab6</p>
+    <p>la rama donde esta ubicado</p>
+    <p>(HEAD -> master)</p>
+    <p>Autor y correo </p>
+    <p>Author: gladys5 correo@correo.com</p>
+
+    <hr>
+    <p>git log cheatsheet</p>
+    <a href="https://devhints.io/git-log"></a>
+    <hr>
+    <p>git init --bare</p>
+    <p>creamos un repositorio que no tendrá la working tree, o sea, no contendrá una copia de nuestros archivos. Como el
+        repositorio servirá solo como servidor, para que otros miembros del equipo sincronicen sus trabajos, disminuimos
+        espacio
+        de almacenamiento de esta forma.</p>
+    <br>
+    <p>Antes de sincronizar nuestros cambios en el código con algún repositorio remoto, necesitamos agregarlos a nuestro
+        repositorio local.</p>
+    <br>
+    <p>git remote add nombre-repositorio camino/del/repositorio</p>
+    <p>De esta forma tendremos un link de nuestro repositorio local con el repositorio remoto, que llamamos de
+        nombre-repositorio, que está almacenado en camino/del/repositorio.</p>
+    <br>
+    <p>git push [repositorio] master</p>
+    <p>De esta forma enviamos las modificaciones de nuestra Branch master (hablaremos más sobre branches dentro de poco)
+        hacia
+        el repositorio remoto. Basta con substituir [repositorio] por el nombre que dimos al repositorio al agregarlo.
+        Ahora,
+        para traer los datos que están en el repositorio remoto, podemos utilizar git pull [repositorio] master</p>
+</body>
+
 </html>
