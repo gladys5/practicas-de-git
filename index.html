@@ -73,6 +73,30 @@
     (master).
 
     <p>prueva de pull</p>
+
+    <p>1 - git restore</p>
+
+    <p>2 - git restore --staged</p>
+
+    <p>3 - git revert</p>
+
+
+    <p>Con el git restore deshacemos una modificación que aún no fue agregada al index o stage, o sea, antes
+        de hacer git add. Después de agregar con git add, para deshacer una modificación, necesitamos sacarlo de este
+        estado,
+        con git restore --staged. Ahora, si ya hicimos el commit, el comando git revert puede salvarnos.</p>
+    <br>
+    <hr>
+    <p>+ línea agregada</p>
+    <p>- línea eliminada</p>
+    <p>- línea modificada (versión antigua)</p>
+    <p>+ línea modificada (nueva versión)</p>
+    <p>
+
+        El símbolo de sustracción (-) antes de la línea indica que ella no está más presente en el archivo.
+        Ahora, el símbolo de adición (+) muestra que es una línea nueva. Las modificaciones son representadas por una
+        eliminación y adición de línea.
+    </p>
 </body>
 
 </html>
